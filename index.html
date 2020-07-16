@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery with CallBack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        console.log("Sending your Request");
+        $.get("https://usman-recipes.herokuapp.com/api/recipes", callback);
+        //This is a callback function 'callback' that is called when the data is loaded and it can
+        //execute all the code after the function
+        function callback(data) {
+          console.log("Data Acquired");
+          console.log(data.length);
+        }
+        console.log("Request Sent");
+      });
+    </script>
+  </head>
+  <body>
+    Testing jQuery Callback because it can run on Client Side not on Server Side
+    so that why we Web as our source
+    <br />
+    <hr />
+    It can be seen in the console that the Call back will wait for the response
+    while the line of codes executing after the callback function is simply
+    running smoothly.
+  </body>
+</html>
