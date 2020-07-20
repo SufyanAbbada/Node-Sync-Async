@@ -1,0 +1,1 @@
+You are Accessing File Contents from an External file using Node.
